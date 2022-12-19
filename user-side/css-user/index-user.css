@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    font-family: 'Montserrat';
+    --content-height: 100vh;
+    /* --card-border-radius: 25px; */
+    --card-border-radius: 5px;
+}
+
+.main{
+    margin: 0;
+    background-color: whitesmoke;
+    background-image: url("../user-resources/bg2.png");
+    background-repeat: repeat;
+    background-size: 21%;
+    height: var(--content-height);
+    max-height: var(--content-height);
+    position:fixed;
+    width: 100%;
+}
+
+.clear{
+    grid-area: clear;
+}
+
+.header { 
+    grid-area: header; 
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    width: 1fr;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 18px;
+    /* border: 2px solid royalblue; */
+    color: white;
+}
+
+.header .searchbar{
+    display: flex;
+    /* border: 2px solid yellow; */
+    align-items: center;
+    background-color: whitesmoke;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 30px;
+}
+
+.header .searchbar >form{
+    display: flex;
+    height: 35px;
+}
+
+.header .searchbar > form > button{
+    background-image: url(../user-resources/search-icon-black.svg);
+    width: 30px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.header .login{
+    cursor: pointer;
+    display: flex;
+    background-color: #003566;
+    height: 40px;
+    width: 80px;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.content1 { 
+    display: flex;
+    justify-content: center;
+    grid-area: content1;
+    /* border: 2px solid red; */
+    margin-left: 50px;
+    max-width: 1380px;
+}
+
+.content1 .carouselxx{
+    width: 95%;
+    /* border: 3px solid #003566; */
+    /* border: 2px solid blue; */
+}
+
+.content1 .carousel .carousel-indicators > button{
+    background-color: whitesmoke;
+}
+
+.content1 .carousel-item .carousel-caption{
+    color: whitesmoke;
+    font-weight: bolder;
+    background-color: #003566;
+    opacity: 0.5;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.content1 .carousel-item .carousel-caption >p{
+    font-size: 14px;
+}
+
+.content1 .carousel-item >img{
+    height: 500px;
+    overflow: hidden;
+}
+
+.content2 { 
+    grid-area: content2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100vh; */
+    /* border: 2px solid yellow; */
+    margin-left: 50px;
+    max-width: 1380px;
+}
+
+.content2-top{
+    color: whitesmoke;
+    text-align: left;
+    /* border: 2px solid pink; */
+    margin-bottom: 20px;
+}
+
+.content2 .row .col > a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    float: right;
+}
+
+.content2 .row .col > a:hover{
+    color: #003566;
+}
+
+.seeall{
+    align-self: center;
+}
+
+.cards{
+    width: 100%;
+    /* border: 2px solid purple; */
+}
+
+.cards .col .card{
+    background-color: transparent;
+    border-radius: var(--card-border-radius);
+}
+
+.cards .col .card >img{
+    border-radius: var(--card-border-radius);
+    height: 90%;
+}
+
+.content3{
+    grid-area: content3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content3-top{
+    color: whitesmoke;
+    text-align: left;
+    /* border: 2px solid pink; */
+}
+
+.content3 .row .col > a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    float: right;
+}
+
+.content3 .row .col > a:hover{
+    color: rgb(255, 0, 0);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'sidenav header header header header header header header'
+        'sidenav content1 content1 content1 content1 content1 content1 content1'
+        'sidenav content2 content2 content2 content2 content2 content2 content2'
+        'sidenav clear clear clear clear clear clear clear'
+        /* 'sidenav content3 content3 content3 content3 content3 content3 content3' */;
+}
+  
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+/* Pandora's logo */
+.logo img{
+    width: 150px;
+    height: auto;
+}
+
+.sidenav {
+    grid-area: sidenav; 
+    /* background-color: #d62828; */
+    background-color: #003566;
+    /* background: -webkit-linear-gradient(bottom, red, #003566); */
+    height: var(--content-height);
+    width: 32vh; 
+    /* position: fixed; */
+    /* border-right: 0.5px solid whitesmoke; */
+}
+
+/* hr(line) configuration */
+.sidenav-content > hr{
+    width: 70%;
+    margin: auto;
+    color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* sidenav top (below logo) */
+
+.home, .movies, .series, .favourite{
+    display: flex;
+}
+
+.home:hover, .movies:hover, .series:hover, .favourite:hover{
+    cursor: pointer;
+}
+
+.home > img, .movies >img, .series >img, .favourite >img{
+    width: 30px;
+    margin-right: 20px;
+}
+
+.active1{
+    grid-area: active1;
+}
+
+.active2{
+    grid-area: active2;
+}
+
+.active3{
+    grid-area: active3;
+}
+
+.active4{
+    grid-area: active4;
+}
+
+.home{
+    grid-area: home;
+}
+
+.movies{
+    grid-area: movies;
+}
+
+.series{
+    grid-area: series;
+}
+
+.favourite{
+    grid-area: favourite;
+}
+
+/* sidenav content top */
+.sidenav-content-top{
+    display: grid;
+    grid-template-areas: 
+        'active1 home'
+        'active2 movies'
+        'active3 series'
+        'active4 favourite';
+    text-align: left;
+    /* padding-left: 45px;
+    padding-right: 45px; */
+}
+
+.active1, .active2, .active3, .active4{
+    width: 10px;
+}
+
+.active1{
+    background-color: whitesmoke;
+    height: 50%;
+    align-self: center;
+}
+
+.home, .movies, .series, .favourite{
+    color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px
+}
+
+/* sidenav middle */
+.sidenav-middle-header{
+    grid-area: sidenav-middle-header;
+}
+
+.sidenav-middle-header > h5{
+    padding-top: 20px;
+    color: whitesmoke;
+}
+
+.account-logo{
+    grid-area: account-logo;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.account-logo >h4{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.account-logo > img{
+    width: 30px;
+}
+
+.sidenav-content-middle{
+    display: grid;
+    grid-template: 
+    'sidenav-middle-header sidenav-middle-header sidenav-middle-header'
+    'account-logo account-text account-text';
+    text-align: left;
+    padding-left: 45px;
+    gap: 5px;
+}
+
+/* sidenav bottom */
+.sidenav-content-bottom{
+    margin-top: 260px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.sidenav-content-bottom .logout{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid yellow; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.sidenav-content-bottom .logout:hover{
+    background-color: #002547;
+}
+
+.sidenav-content-bottom .logout> img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.logout{
+    
+    color: whitesmoke;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.logout >form >input{
+    background-color: #003566;
+    border: none;
+    color: whitesmoke;
+}
+
+.logout >form >input:hover{
+    background-color: #002547;
+}

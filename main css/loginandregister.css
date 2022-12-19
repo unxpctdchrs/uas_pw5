@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+body{
+    background-image: url("../resources/backgrounds/bg2.png");
+    background-repeat: repeat;
+}
+
+/* supaya gambarnya gabisa di klik /di block */
+.jgndiklik{
+    /* pointer-events: none; */
+    user-select: none;
+}
+
+.content {
+    width: 30%;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.logo img{
+    height: 5.125rem!important;
+    width: 18.13rem!important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.clear{
+    padding: 20px;
+}
+
+.signinforms{
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.container{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.container .row .col > button{
+    background-color: #003566;
+    color: whitesmoke;
+}
+/* ////////////////////////// */
+
+.plgbawah{
+    text-align: center;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.plgbawah a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.plgbawah a:hover{
+    color: #014585;
+}
