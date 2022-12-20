@@ -47,7 +47,7 @@
               </div>
               <div class="account-logo">
                 <img src="../resources/person.svg" alt="">
-                <h4><?php echo $_SESSION['username']; ?></h4>
+                <h4><?php echo $_SESSION['user_name']; ?></h4>
               </div>
             </div>
             <hr>

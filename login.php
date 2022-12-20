@@ -10,7 +10,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
-      <?php include './php configuration/logincheck.php';?>
         <div class="content">
             <div class="logo" onclick="location.href='index.php'">
                 <img class="jgndiklik" src="resources/pandora-logo.svg" alt="">
@@ -20,7 +19,14 @@
             <div class="clear"></div>
             <div class="signinforms">
                 <p>Sign In</p>
-                <form method="POST" class="form" action="">
+                <form method="POST" class="form" action="./php configuration/logincheck.php">
+                    <?php
+                      if(isset($error)){
+                        foreach($error as $error){
+                            echo '<span class="error-msg">'.$error.'</span>';
+                        };
+                      };
+                    ?>
                     <div class="mb-3">
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username" id="username">
                     </div>

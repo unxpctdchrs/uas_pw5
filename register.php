@@ -19,13 +19,24 @@
             <div class="clear"></div>
             <div class="signinforms">
                 <p>Register</p>
-                <form method="get" class="form" action="./php configuration/signup-process.php">
+                <form method="POST" class="form" action="./php configuration/signup-process.php">
+                    <?php
+                      if(isset($error)){
+                        foreach($error as $error){
+                            echo '<span class="error-msg">'.$error.'</span>';
+                        };
+                      };
+                    ?>
                     <div class="mb-3" id="username">
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username" id="name">
                     </div>
                     <div class="mb-3" id="password">
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="create-password" id="name" required>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" name="password" id="name" required>
                     </div>
+                    <!-- <select name="user_type">
+                      <option value="user">user</option>
+                      <option value="admin">admin</option>
+                    </select> -->
                     <div class="container text-center">
                       <div class="row">
                         <div class="col d-flex flex-row-reverse">
