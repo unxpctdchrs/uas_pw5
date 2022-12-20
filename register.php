@@ -10,7 +10,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
-      <?php include './php configuration/signup-process.php';?>
         <div class="content">
             <div class="logo" onclick="location.href='index.php'">
                 <img class="jgndiklik" src="resources/pandora-logo.svg" alt="">
@@ -20,11 +19,11 @@
             <div class="clear"></div>
             <div class="signinforms">
                 <p>Register</p>
-                <form method="POST" class="form" action="">
-                    <div class="mb-3">
+                <form method="get" class="form" action="./php configuration/signup-process.php">
+                    <div class="mb-3" id="username">
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username" id="name">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3" id="password">
                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="create-password" id="name" required>
                     </div>
                     <div class="container text-center">
