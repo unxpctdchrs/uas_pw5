@@ -20,13 +20,6 @@
             <div class="signinforms">
                 <p>Register</p>
                 <form method="POST" class="form" action="./php configuration/signup-process.php">
-                    <?php
-                      if(isset($error)){
-                        foreach($error as $error){
-                            echo '<span class="error-msg">'.$error.'</span>';
-                        };
-                      };
-                    ?>
                     <div class="mb-3" id="username">
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username" id="name">
                     </div>

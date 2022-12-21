@@ -24,17 +24,18 @@ if(isset($_POST['submit'])){
       if($row['user_type'] == 'admin'){
 
          $_SESSION['admin_name'] = $row['username'];
-         header('location: ../user-side/admin-page.php');
+         header('location: ../user-side/admin-page-home.php');
 
       }elseif($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['username'];
          header('location: ../user-side/index-user.php');
 
-      }
-     
-   }else{
-      $error[] = 'incorrect email or password!';
+      }  
+   }
+   else{
+       echo "<script type='text/javascript'>window.location = '../login.php'; 
+       alert('Username or password do not match');</script>";
    }
 
 };

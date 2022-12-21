@@ -26,10 +26,6 @@ if(isset($_POST['submit'])){
       $insert = "INSERT INTO users(username, password, user_type) VALUES('$name','$pass','$user_type')";
       mysqli_query($connection, $insert);
       header('location: ../login.php');
-      // if($pass != $cpass){
-      //    $error[] = 'password not matched!';
-      // }else{
-      // }
    }
 
 };

@@ -20,13 +20,6 @@
             <div class="signinforms">
                 <p>Sign In</p>
                 <form method="POST" class="form" action="./php configuration/logincheck.php">
-                    <?php
-                      if(isset($error)){
-                        foreach($error as $error){
-                            echo '<span class="error-msg">'.$error.'</span>';
-                        };
-                      };
-                    ?>
                     <div class="mb-3">
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username" id="username">
                     </div>

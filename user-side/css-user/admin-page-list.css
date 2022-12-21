@@ -1,0 +1,148 @@
+*{
+    font-family: 'Montserrat';
+}
+
+body{
+    background-image: url("../user-resources/bg2.png");
+    background-repeat: repeat;
+    margin: 0;
+}
+
+main{
+    max-width: 1500px;
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+main .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    /* flex: 1 1 210px; */
+    text-align: center;
+    margin: 20px;
+    height: 360px;
+    background-color: #003566;
+    color: whitesmoke;
+    width: 200px;
+    border-radius: 20px;
+    /* border: 2px solid red; */
+}
+
+main .card .image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* border: 2px solid purple; */
+}
+
+main .card .image img{
+    width: 60%;
+    margin-top: 20px;
+    height: auto;
+    border-radius: 20px;
+}
+
+main .card .caption{
+    display: flex;
+    justify-content: center;
+}
+
+main .card .caption p{
+    font-size: 16px;
+}
+
+main .card a{
+    width: 50%;
+}
+
+main .card button{
+    border: 1px solid whitesmoke;
+    padding: 1em;
+    width: 80%;
+    cursor: pointer;
+    margin-top: 2em;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #003566;
+    color: whitesmoke;
+    /* border: none; */
+}
+
+main .card button:hover{
+    background-color: #002547;
+    color: whitesmoke;
+}
+
+/* main .card button:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .5s;
+    margin: 0;
+}
+
+main .card button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    background-color: black;
+    transition: all .5s;
+} */
+
+/* main .card button:hover::before{
+    width: 30%;
+}
+
+main .card button:hover::after{
+    width: 30%;
+} */
+
+.nav{
+    color: whitesmoke;
+    background-color: #003566;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.nav > form{
+    padding-top: 15px;
+    /* border: 2px solid pink; */
+    align-items: center;
+}
+
+.nav > div{
+    cursor: pointer;
+}
+
+.nav > form >input, .nav > div{
+    cursor: pointer;
+    background-color: #003566;
+    color: whitesmoke;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav > form > input:hover, .nav > div:hover{
+    background-color: #002547;
+}

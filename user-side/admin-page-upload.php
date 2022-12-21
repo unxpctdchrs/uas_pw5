@@ -4,8 +4,8 @@ require_once '../php configuration/config.php';
 
 if(isset($_POST["submit"])){
   $productname = $_POST["productname"];
-  $price = $_POST["price"];
-  $discount = $_POST["discount"];
+//   $price = $_POST["price"];
+//   $discount = $_POST["discount"];
 
   //For uploads photos
   $upload_dir = "uploads/"; //this is where the uploaded photo stored
@@ -37,14 +37,13 @@ if(isset($_POST["submit"])){
   if($upload_ok == 0){
      echo '<script>alert("sorry your file is doesn\'t uploaded. Please try again")</script>';
   }else{
-      if($productname != "" && $price !=""){
+      if($productname != ""){
           move_uploaded_file($_FILES["imageUpload"]["tmp_name"],$upload_file);
 
-          $sql = "INSERT INTO product(product_name,price,discount,product_image)
-          VALUES('$productname',$price,$discount,'$product_image')";
-
-          if($conn->query($sql) === TRUE){
-              echo "<script>alert('your product uploaded successfully')</script>";
+          $sql = "INSERT INTO product(product_name, product_image)
+          VALUES('$productname', '$product_image')";
+          if($connection->query($sql) === TRUE){
+              echo "<script>alert('upload successful')</script>";
           }
       }
   }
@@ -61,19 +60,25 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="upload.css">
+    <title>Pandora - Admin - Upload</title>
+    <link rel="stylesheet" href="./css-user/admin-page-upload.css">
 </head>
 <body>
-    <?php
-         include_once 'header.php';
 
-    ?>
+    <div class="nav">
+        <div class="Home" onclick="location.href='admin-page-home.php'">Home</div>
+        <div class="list" onclick="location.href='admin-page-list.php'">List</div>
+        <div class="upload" onclick="location.href='admin-page-upload.php'">Upload</div>
+        <div class="upload" onclick="location.href='admin-page-favourites.php'">Watch List</div>
+        <form action="../php configuration/logout.php" method="get">
+            <input type="submit" value="Log Out">
+        </form>
+    </div>
+
+
     <section id="upload_container">
-        <form action="upload.php" method="POST" enctype="multipart/form-data" >
-            <input type="text" name="productname" id="productname" placeholder="Product Name" required>
-            <input type="number" name="price" id="price" placeholder="Product Price" required>
-            <input type="number" name="discount" id="discount" placeholder="Product Discount">
+        <form action="admin-page-upload.php" method="POST" enctype="multipart/form-data" >
+            <input type="text" name="productname" id="productname" placeholder="Name" required>
             <input type="file" name="imageUpload" id="imageUpload" required hidden>
             <button id="choose" onclick="upload();">Choose Image</button>
             <input type="submit" value="Upload" name="submit">
@@ -82,8 +87,6 @@ if(isset($_POST["submit"])){
 
     <script>
         var productname = document.getElementById("productname");
-        var price = document.getElementById("price");
-        var discount = document.getElementById("discount");
         var choose = document.getElementById("choose");
         var uploadImage = document.getElementById("imageUpload");
 

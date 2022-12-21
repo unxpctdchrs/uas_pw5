@@ -1,0 +1,73 @@
+*{
+    font-family: 'Montserrat';
+}
+
+body{
+    background-image: url("../user-resources/bg2.png");
+    background-repeat: repeat;
+    margin: 0;
+}
+
+.nav{
+    color: whitesmoke;
+    background-color: #003566;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 70px;
+}
+
+.nav > form{
+    /* padding-top: 15px; */
+    /* border: 2px solid pink; */
+    align-items: center;
+}
+
+.nav > div{
+    cursor: pointer;
+}
+
+.nav > form >input, .nav > div{
+    cursor: pointer;
+    background-color: #003566;
+    color: whitesmoke;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav > form > input:hover, .nav > div:hover{
+    background-color: #002547;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    /* border: 2px solid red; */
+    margin-top: 250px;
+ }
+ 
+ .container .content{
+    text-align: center;
+ }
+ 
+ .container .content h3{
+    font-size: 30px;
+    color:whitesmoke;
+ }
+ 
+ .container .content h3 span{
+    background: #003566;
+    color:whitesmoke;
+    border-radius: 5px;
+    padding:10px;
+ }
+ 
+ .container .content h1{
+    font-size: 50px;
+    color:whitesmoke;
+ }
