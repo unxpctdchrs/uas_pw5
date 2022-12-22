@@ -15,7 +15,7 @@
         <div class="sidenav">
           <div class="sidenav-content">
             <div class="logo">
-              <img src="resources/pandora-logo.svg" alt="">
+              <img src="./resources/pandora-logo.svg" alt="">
             </div>
             <hr>
             <div class="sidenav-content-top">
