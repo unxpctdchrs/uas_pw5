@@ -45,7 +45,7 @@
               <div class="sidenav-middle-header">
                 <h5>Accounts</h5>
               </div>
-              <div class="account-logo">
+              <div class="account-logo" onclick="location.href='./user-profile.php'">
                 <img src="../resources/person.svg" alt="">
                 <h4><?php echo $_SESSION['user_name']; ?></h4>
               </div>

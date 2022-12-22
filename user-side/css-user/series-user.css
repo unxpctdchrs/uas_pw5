@@ -199,6 +199,11 @@
     font-size: 20px;
 }
 
+.account-logo>h4:hover{
+    background-color: #002547;
+    cursor: pointer; 
+}
+
 .account-logo > img{
     width: 30px;
 }
