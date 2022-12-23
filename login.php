@@ -12,7 +12,7 @@
     <body>
         <div class="content">
             <div class="logo" onclick="location.href='index.php'">
-                <img class="jgndiklik" src="./resources/pandora-logo.svg" alt="">
+                <img class="jgndiklik" src="resources/pandora-logo.svg" alt="">
             </div>
             <!-- cara cepat buat kasih jarak -->
             <div class="clear"></div>
